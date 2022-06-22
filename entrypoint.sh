@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
 echo "Hello diagrams $1"
-time="Holi"
+image="Holi"
 echo "::set-output name=image::$image"
