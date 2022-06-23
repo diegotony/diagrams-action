@@ -1,14 +1,11 @@
 # action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'diagrams-action'
+author: "Diego Castillo @diegotony"
+description: 'Convert python diagrams file to .png'
 inputs:
-  diagram-python:  # id of input
+  args:  # id of input
     description: 'diagram python file name'
-    required: true
-    default: 'diagram.py'
-outputs:
-  image: # id of output
-    description: 'image generated'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
