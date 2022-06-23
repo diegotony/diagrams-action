@@ -1,0 +1,12 @@
+name: Semantic Release
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  sem-ver:
+    uses: diegotony/gh-pipelines/.github/workflows/semantic-release.yml@main
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}

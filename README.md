@@ -1,21 +1,21 @@
-# diagrams-action docker action
+# Diagrams Action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+This GitHub action exposes the python diagrams library like command for use in building/archiving. It is important to note that this action currently only supports Linux.
 
 ## Inputs
 
-## `who-to-greet`
+## `args`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Not Required** The diagrams command to build . Default "`python3 diagrams.py`".
 
-## Outputs
 
-## `time`
-
-The time we greeted you.
 
 ## Example usage
-
-uses: actions/hello-world-docker-action@v1
-with:
-  who-to-greet: 'Mona the Octocat'
+```yaml
+- uses: actions/checkout@v3
+- name: Build Diagram
+    id: diagram
+    uses: diegotony/diagrams-action@main
+    with:
+      args: python3 diagram.py
+```
