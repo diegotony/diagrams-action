@@ -6,7 +6,7 @@ This GitHub action exposes the python diagrams library like command for use in b
 
 ## `args`
 
-**Not Required** The diagrams command to build . Default "`python3 diagrams.py`".
+**Not Required** The diagrams command to build . Default "`python3 diagram.py`".
 
 
 
@@ -15,7 +15,7 @@ This GitHub action exposes the python diagrams library like command for use in b
 - uses: actions/checkout@v3
 - name: Build Diagram
     id: diagram
-    uses: diegotony/diagrams-action@main
+    uses: diegotony/diagrams-action@V1.0.0
     with:
       args: python3 diagram.py
 ```
