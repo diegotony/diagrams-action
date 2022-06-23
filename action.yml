@@ -4,8 +4,10 @@ author: "Diego Castillo @diegotony"
 description: 'Convert python diagrams file to .png'
 inputs:
   args:  # id of input
-    description: 'diagram python file name'
+    description: 'command to execute python file'
     required: false
+    default: python3 diagrams.py
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
