@@ -1,8 +1,4 @@
-# Container image that runs your code
-# FROM alpine:latest
-# RUN apk add graphviz graphviz_dev graphvizgd graphvizpython graphvizgraphs py3-pip
-# RUN python3 -m pip install --upgrade pip diagrams
-# FROM debian:10-slim
-FROM bitnami/minideb:latest
-RUN apt update -y && apt install graphviz python3-pip -y
-RUN python3 -m pip install --upgrade pip diagrams
+FROM python:3-alpine
+RUN apk update && apk add --no-cache \
+  gcc libc-dev g++ graphviz go imagemagick inkscape ttf-opensans curl fontconfig xdg-utils py3-pip
+RUN python3 -m pip install --upgrade pip diagrams black graphviz jinja2
